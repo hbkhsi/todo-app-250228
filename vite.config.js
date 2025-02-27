@@ -6,5 +6,22 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
+  },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'framer-motion'],
+          animations: ['framer-motion']
+        }
+      }
+    }
   }
 });
