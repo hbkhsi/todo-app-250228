@@ -1,4 +1,4 @@
-# Minimalist Todo App
+# Todo App
 
 A clean, modern todo application built with React, Tailwind CSS, and Framer Motion.
 
